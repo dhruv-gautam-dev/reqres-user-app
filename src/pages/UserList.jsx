@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../CSS/UserList.css";
+import "../css/UserList.css";
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
@@ -75,8 +75,9 @@ const UserList = () => {
               <span>{`${user.first_name} ${user.last_name}`}</span>
 
               <p>Email: {user.email}</p>
-              <div>
+              <div className="Buttons">
                 <button
+                  className="Button"
                   onClick={() => {
                     handleEdit(user.id);
                   }}
@@ -84,6 +85,7 @@ const UserList = () => {
                   Edit
                 </button>
                 <button
+                  className="Button"
                   onClick={() => {
                     handleDelete(user.id);
                   }}
@@ -95,11 +97,15 @@ const UserList = () => {
           </div>
         ))}
       </div>
-      <div className="pagination">
-        <button onClick={handlePrev} disabled={page === 1}>
-          previous
+      <div className="pagination Buttons">
+        <button className="Button" onClick={handlePrev} disabled={page === 1}>
+          prev
         </button>
-        <button onClick={handleNext} disabled={page === totalPages}>
+        <button
+          className="Button"
+          onClick={handleNext}
+          disabled={page === totalPages}
+        >
           Next
         </button>
       </div>

@@ -72,6 +72,8 @@ const UserList = () => {
                 {user.fistName}
                 {user.LastName}
               </h3>
+              <span>{`${user.first_name} ${user.last_name}`}</span>
+
               <p>Email: {user.email}</p>
               <div>
                 <button

@@ -107,3 +107,13 @@ npm start
 - **Demonstrates practical React skills**: Component-based architecture, state management, and routing.
 - **Real-world scenarios**: Handling API requests, pagination, and form validation.
 - **Clean and structured code**: Easy to read and maintain.
+
+---
+
+## \* Next Steps
+
+- **Client-side filtering and search functionality.**
+
+- **Improved authentication with JWT tokens.**
+
+- **Hosting the app on a free server** (e.g., [Vercel](https://vercel.com), [Netlify](https://www.netlify.com)).

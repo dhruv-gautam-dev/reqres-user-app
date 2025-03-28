@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { login } from "../services/auth.js";
-const Login = () => {
+const LoginUser = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -11,7 +11,7 @@ const Login = () => {
     e.preventDefault();
     setError("");
     try {
-      const result = await login(email, password);
+      const result = await login(email, password); // called the service layer
       localStorage.setItem("token", result.token);
       alert("Login Successful");
       navigate("/user");
@@ -50,4 +50,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginUser;

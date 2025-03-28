@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/UserList.css";
+import "/src/styles/UserList.css";
+
 const UserList = () => {
   const [users, setUsers] = useState([]);
   const [page, setPage] = useState(1);

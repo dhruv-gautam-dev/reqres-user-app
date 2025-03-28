@@ -44,29 +44,63 @@ const UserList = () => {
     }
   };
 
+  const handleEdit = (id) => {
+    navigate(`/users/${id}`);
+  };
+
+  const handleDelete = async (id) => {
+    if (window.confirm("Are you sure you want to delete the user ?")) {
+      try {
+        await axios.delete(`https://reqres.in/api/users/${id}`);
+        alert("User deleted Successfully");
+      } catch (error) {
+        console.error(`Failed to delete user:`, error);
+        alert("Failed to delete user.");
+      }
+    }
+  };
+
   return (
     <div className="container">
       <h1 className="header">UserList</h1>
       <div className="userGrid">
         {users.map((user) => (
-          <div key={user.id}>
-            <img src={user.avatar} alt="avatar" />
+          <div key={user.id} className="card">
+            <img src={user.avatar} alt="avatar" className="avatar" />
             <div>
               <h3>
                 {user.fistName}
                 {user.LastName}
               </h3>
               <p>Email: {user.email}</p>
+              <div>
+                <button
+                  onClick={() => {
+                    handleEdit(user.id);
+                  }}
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={() => {
+                    handleDelete(user.id);
+                  }}
+                >
+                  Delete
+                </button>
+              </div>
             </div>
           </div>
         ))}
       </div>
-      <button onClick={handlePrev} disabled={page === 1}>
-        previous
-      </button>
-      <button onClick={handleNext} disabled={page === totalPages}>
-        Next
-      </button>
+      <div className="pagination">
+        <button onClick={handlePrev} disabled={page === 1}>
+          previous
+        </button>
+        <button onClick={handleNext} disabled={page === totalPages}>
+          Next
+        </button>
+      </div>
     </div>
   );
 };

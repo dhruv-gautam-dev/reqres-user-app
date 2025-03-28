@@ -1,44 +1,44 @@
 .container {
-  padding: '20px';
-  maxWidth: '1200px';
-  margin: '0 auto';
-  fontFamily: 'Arial, sans-serif';
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
 }
 
 .header {
-  textAlign: 'center';
-  marginBottom: '20px';
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .userGrid {
-  display: 'grid';
-  gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))';
-  gap: '20px';
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .card {
-  border: '1px solid #ddd';
-  borderRadius: '8px';
-  boxShadow: '0 4px 8px rgba(0,0,0,0.1)';
-  padding: '15px';
-  textAlign: 'center';
-  transition: '0.3s';
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
 }
 
 .cardHover {
-  transform: 'scale(1.05)';
+  transform: scale(1.05);
 }
 
 .avatar {
-  width: '100px';
-  height: '100px';
-  borderRadius: '50%';
-  marginBottom: '10px';
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 .pagination {
-  display: 'flex';
-  justifyContent: 'center';
-  alignItems: 'center';
-  marginTop: '20px';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }

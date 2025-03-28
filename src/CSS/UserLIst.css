@@ -1,0 +1,44 @@
+.container {
+  padding: '20px';
+  maxWidth: '1200px';
+  margin: '0 auto';
+  fontFamily: 'Arial, sans-serif';
+}
+
+.header {
+  textAlign: 'center';
+  marginBottom: '20px';
+}
+
+.userGrid {
+  display: 'grid';
+  gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))';
+  gap: '20px';
+}
+
+.card {
+  border: '1px solid #ddd';
+  borderRadius: '8px';
+  boxShadow: '0 4px 8px rgba(0,0,0,0.1)';
+  padding: '15px';
+  textAlign: 'center';
+  transition: '0.3s';
+}
+
+.cardHover {
+  transform: 'scale(1.05)';
+}
+
+.avatar {
+  width: '100px';
+  height: '100px';
+  borderRadius: '50%';
+  marginBottom: '10px';
+}
+
+.pagination {
+  display: 'flex';
+  justifyContent: 'center';
+  alignItems: 'center';
+  marginTop: '20px';
+}

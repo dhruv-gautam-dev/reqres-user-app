@@ -61,7 +61,7 @@ const UserList = () => {
 
   return (
     <div className=" h-screen w-screen border-black border-2 bg-green-500">
-      <h1 class="mb-4 text-center mt-20  text-4xl font-extrabold   md:text-5xl lg:text-6xl dark:text-white">
+      <h1 className="mb-4 text-center mt-20  text-4xl font-extrabold   md:text-5xl lg:text-6xl dark:text-white">
         UserList
       </h1>
       <div className="  mt-16  flex justify-center items-center ml-auto mr-auto">
@@ -93,7 +93,7 @@ const UserList = () => {
 
                 <div className="Buttons   mt-20">
                   <button
-                    class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+                    className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
                     onClick={() => {
                       handleEdit(user.id);
                     }}
@@ -101,7 +101,7 @@ const UserList = () => {
                     Edit
                   </button>
                   <button
-                    class="    text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+                    className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
                     onClick={() => {
                       handleDelete(user.id);
                     }}

@@ -69,7 +69,7 @@ const UserList = () => {
           {users.map((user) => (
             <div
               key={user.id}
-              className="card flex gap-4 box-border bg-white p-6 shadow-xl rounded-lg  "
+              className="card flex  gap-4 box-border bg-white p-6 shadow-xl rounded-lg  "
             >
               <img
                 src={user.avatar}
@@ -77,7 +77,7 @@ const UserList = () => {
                 class="w-[150px] h-[150px]  p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500"
               />
 
-              <div className="personal_details p-1 flex flex-col items-start justify-center">
+              <div className="personal_details p-1 mt-6 flex flex-col items-start justify-center">
                 <div className="name text-xl font-bold">
                   Name:
                   <span className="text-lg font-medium ml-1">
@@ -115,7 +115,7 @@ const UserList = () => {
         </div>
       </div>
 
-      <div className=" Buttons flex flex-row gap-96  items-center justify-center mt-10 p-6">
+      <div className=" Buttons flex flex-row gap-96  items-center justify-center mt-8 p-6">
         <button
           className="Button bg-white px-3 text-green-500 border-none font-semibold rounded-lg py-1 "
           onClick={handlePrev}

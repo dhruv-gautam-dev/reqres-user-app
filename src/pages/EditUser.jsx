@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const EditUSer = () => {
   const { id } = useParams();
@@ -33,6 +33,10 @@ const EditUSer = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleCancel = (id) => {
+    navigate(`/users`);
   };
 
   const handleSubmit = async (e) => {
@@ -93,9 +97,9 @@ const EditUSer = () => {
             />
           </div>
 
-          <div className="mt-16 flex flex-row justify-center items-center gap-12">
+          <div className="mt-14 flex flex-row justify-center items-center gap-12">
             <button
-              class=" mt-16text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+              class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
               type="submit"
             >
               Submit
@@ -103,9 +107,7 @@ const EditUSer = () => {
             <button
               class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
               type="button"
-              onClick={() => {
-                Navigate("/user");
-              }}
+              onClick={handleCancel}
             >
               cancel
             </button>

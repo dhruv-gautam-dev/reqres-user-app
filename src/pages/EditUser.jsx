@@ -36,7 +36,7 @@ const EditUSer = () => {
   };
 
   const handleCancel = (id) => {
-    navigate(`/users`);
+    navigate(`/user`);
   };
 
   const handleSubmit = async (e) => {
